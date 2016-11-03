@@ -1,0 +1,10 @@
+dj-database-url==0.4.1
+Django==1.10.2
+django-crudbuilder==0.2.4
+django-extensions==1.6.3
+django-tables2==1.2.6
+gunicorn==19.4.5
+Pillow==3.3.0
+six==1.10.0
+wheel==0.26.0
+whitenoise==3.0
