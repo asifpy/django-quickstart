@@ -2,24 +2,22 @@
 
 {% block main_content %}
     <div class="container">
-        <h3>Examples</h3>
+        <h3>Django Quickstart</h3>
         <hr/>
         <table class="table table-bordered table-condensed">
         <thead>
         	<tr>
         		<th>Name</th>
-        		<th>Description</th>
+        		<th></th>
         	</tr>
         </thead>
         <tbody>
-        	<tr>
-        		<td><a href="{% url 'app1-post-list' %}"> Notification on object create</a></td>
-        		<td>Notification will get displayed for all the clients on LIST page whenever object being created/updated</td>
-        	</tr>
-        	<tr>
-        		<td><a href="{% url 'app1-votes' %}">Votes</a></td>
-        		<td>Vote for your favourite flavour of ice cream!</td>
-        	</tr>
+        	{% for package in packages %}
+                <tr>
+                    <td>{{package.0}}</td>
+                    <td><a class="btn btn-primary" href="{% url package.1 %}"><span class="glyphicon glyphicon-play"></span></a></td>
+                </tr>
+            {% endfor %}
         </tbody>
         </table>
     	

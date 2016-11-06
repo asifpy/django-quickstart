@@ -49,6 +49,6 @@ class MessageForm(forms.Form):
         self.helper = FormHelper()
         self.helper.form_tag = False
         self.helper.form_show_errors = False
-        # self.helper.label_class = 'col-sm-4'
+        # self.helper.label_class = 'col-sm-2'
         # self.helper.field_class = 'col-sm-6'
         super(MessageForm, self).__init__(*args, **kwargs)
