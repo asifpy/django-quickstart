@@ -22,4 +22,6 @@ urlpatterns = [
     
     # django-crudbuilder
     url(r'^crud/', include('crudbuilder.urls')),
+    # crispy-forms
+    url(r'^crispy/', include('crispyforms_example.urls')),
 ]

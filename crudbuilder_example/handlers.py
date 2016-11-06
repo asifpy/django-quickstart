@@ -6,7 +6,7 @@ from crudbuilder.signals import(
     post_inline_update_signal
 )
 
-from crudbuilder_example.models import Post
+from core.models import Post
 
 
 @receiver(post_create_signal, sender=Post)

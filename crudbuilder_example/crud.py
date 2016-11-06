@@ -1,6 +1,6 @@
 from crudbuilder.abstract import BaseCrudBuilder
 
-from crudbuilder_example.models import Post
+from core.models import Post
 
 
 class PostCrud(BaseCrudBuilder):

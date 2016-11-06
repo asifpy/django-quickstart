@@ -38,12 +38,18 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'core',
+
     'django_extensions',
     'django_tables2',
 
     # django-crudbuilder
     'crudbuilder',
-    'crudbuilder_example'
+    'crudbuilder_example',
+
+    # crispy-forms
+    'crispy_forms',
+    'crispyforms_example'
 
 )
 
@@ -63,7 +69,7 @@ ROOT_URLCONF = 'django_quickstart.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'django_quickstart/templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -116,16 +122,16 @@ STATICFILES_FINDERS = [
 ]
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "django_quickstart/static")
+    os.path.join(BASE_DIR, "static")
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'django_quickstart/staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'django_quickstart/media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 LOGIN_REDIRECT_URL = '/'
 LOGIN_URL = '/auth/login/'
 
-
+from django_quickstart.settings.crispyforms_settings import *

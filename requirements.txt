@@ -1,5 +1,6 @@
 dj-database-url==0.4.1
 Django==1.10.2
+django-crispy-forms==1.6.1
 django-crudbuilder==0.2.4
 django-extensions==1.6.3
 django-tables2==1.2.6
