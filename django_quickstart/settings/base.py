@@ -49,7 +49,12 @@ INSTALLED_APPS = (
 
     # crispy-forms
     'crispy_forms',
-    'crispyforms_example'
+    'crispyforms_example',
+
+    # django-addanother
+    'django_addanother',
+    'addanother_example'
+
 
 )
 
