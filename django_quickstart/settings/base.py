@@ -53,7 +53,10 @@ INSTALLED_APPS = (
 
     # django-addanother
     'django_addanother',
-    'addanother_example'
+    'addanother_example',
+
+    # caching example
+    'caching_example'
 
 
 )
@@ -138,5 +141,17 @@ MEDIA_URL = '/media/'
 
 LOGIN_REDIRECT_URL = '/'
 LOGIN_URL = '/auth/login/'
+
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379/1",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient"
+        },
+        "KEY_PREFIX": "dqs"
+    }
+}
+
 
 from django_quickstart.settings.crispyforms_settings import *
