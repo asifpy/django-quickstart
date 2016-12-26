@@ -23,11 +23,14 @@ urlpatterns = [
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^auth/', include('django.contrib.auth.urls')),
-    
+
     # django-crudbuilder
     url(r'^crud/', include('crudbuilder.urls')),
     # crispy-forms
     url(r'^crispy/', include('crispyforms_example.urls')),
     # django-addanother
-    url(r'^addanother/', include('addanother_example.urls'))
+    url(r'^addanother/', include('addanother_example.urls')),
+
+    # djangorest frameweork
+    url(r'^djangorest/', include('djangorest_example.urls'))
 ]

@@ -56,7 +56,11 @@ INSTALLED_APPS = (
     'addanother_example',
 
     # caching example
-    'caching_example'
+    'caching_example',
+
+    # django rest framework example
+    'rest_framework',
+    'djangorest_example'
 
 
 )
@@ -155,3 +159,4 @@ CACHES = {
 
 
 from django_quickstart.settings.crispyforms_settings import *
+from django_quickstart.settings.djangorest_settings import *
