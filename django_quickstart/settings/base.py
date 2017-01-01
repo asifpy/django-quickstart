@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+CONFIG_PATH = os.path.join(BASE_DIR, 'config.ini')
 
 # Application definition
 
@@ -60,7 +61,11 @@ INSTALLED_APPS = (
 
     # django rest framework example
     'rest_framework',
-    'djangorest_example'
+    'djangorest_example',
+
+    # social auth
+    'social_django',
+    'pythonsocial_example'
 
 
 )
@@ -74,6 +79,8 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+
+    'social_django.middleware.SocialAuthExceptionMiddleware'
 )
 
 ROOT_URLCONF = 'django_quickstart.urls'
@@ -89,10 +96,19 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect'
             ],
         },
     },
 ]
+
+AUTHENTICATION_BACKENDS = (
+    'social_core.backends.github.GithubOAuth2',
+
+    'django.contrib.auth.backends.ModelBackend',
+)
 
 WSGI_APPLICATION = 'django_quickstart.wsgi.application'
 
@@ -160,3 +176,4 @@ CACHES = {
 
 from django_quickstart.settings.crispyforms_settings import *
 from django_quickstart.settings.djangorest_settings import *
+from django_quickstart.settings.socialauth_settings import *

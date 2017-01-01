@@ -32,5 +32,12 @@ urlpatterns = [
     url(r'^addanother/', include('addanother_example.urls')),
 
     # djangorest frameweork
-    url(r'^djangorest/', include('djangorest_example.urls'))
+    url(r'^djangorest/', include('djangorest_example.urls')),
+
+    # python-social
+    url(r'^social/', include('pythonsocial_example.urls')),
+    url(
+        r'^oauth/',
+        include('social_django.urls', namespace='social')
+    ),
 ]
